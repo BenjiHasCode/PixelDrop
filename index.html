@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        #controls {
+            padding-top: 0px;
+            position: absolute;
+        }
+        
+
+    </style>
+    <title>PixelDrop</title>
+</head>
+<body>
+    <div id="controls">
+        <!-- Materials -->
+        <select id="material">
+            <option value="sand">Sand</option>
+            <option value="water">Water</option>
+            <option value="fire">Fire</option>
+            <option value="smoke">Smoke</option>
+            <option value="wood">Wood</option>
+            <option value="acid">Acid</option> <!-- TODO IMPLEMENT LATER -->
+            <option value="remove">Remove</option>
+        </select>
+        <!-- Radius -->
+        <input type="range" id="radius" min="2" max="100" value="25" step="1">
+    </div>
+
+    <canvas id="canvas"></canvas>
+
+
+    
+    <!-- Import world -->
+    <script src="model/world.js"></script>
+    <!-- Import pixel files -->
+    <script src="model/pixel.js"></script>
+    <script src="model/sand.js"></script>
+    <script src="model/water.js"></script>
+    <script src="model/wood.js"></script>
+    <script src="model/fire.js"></script>
+    <script src="model/smoke.js"></script>
+    <script src="model/acid.js"></script>
+    <!-- Import "game" file -->
+    <script src="pixelDrop.js"></script>
+    <!-- Import util functions -->
+    <script src="util/distance.js"></script>
+    <script src="util/point_util.js"></script>
+    <script src="util/random.js"></script>
+    <script src="util/mouse.js"></script>
+</body>
+</html>
